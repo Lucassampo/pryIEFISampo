@@ -57,6 +57,7 @@
             this.cmdVentas.TabIndex = 1;
             this.cmdVentas.Text = "Ventas";
             this.cmdVentas.UseVisualStyleBackColor = false;
+            this.cmdVentas.Click += new System.EventHandler(this.cmdVentas_Click);
             // 
             // lblRegistro
             // 

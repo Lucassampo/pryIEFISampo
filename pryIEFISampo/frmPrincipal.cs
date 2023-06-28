@@ -32,5 +32,11 @@ namespace pryIEFISampo
             frmProductos productos = new frmProductos();
             productos.ShowDialog();
         }
+
+        private void cmdVentas_Click(object sender, EventArgs e)
+        {
+            frmVentas ventas = new frmVentas();
+            ventas.ShowDialog();
+        }
     }
 }
