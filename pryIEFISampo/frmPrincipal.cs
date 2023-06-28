@@ -21,5 +21,16 @@ namespace pryIEFISampo
         {
 
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdProductos_Click(object sender, EventArgs e)
+        {
+            frmProductos productos = new frmProductos();
+            productos.ShowDialog();
+        }
     }
 }
