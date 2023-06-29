@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace pryIEFISampo
 {
+
     public partial class frmVentas : Form
     {
         public frmVentas()
         {
             InitializeComponent();
+        }
+
+        private void cmdCargar_Click(object sender, EventArgs e)
+        {
+            if (dtpFecha.Value != DateTime.Today)
+            {
+                
+                MessageBox.Show("Se ha grabado correctamente");
+                int i = dtvRegistro.Rows.Add();
+
+                dtvRegistro.Rows[i].Cells[0].Value = dtpFecha.Text;
+                dtvRegistro.Rows[i].Cells[1].Value = txtProducto.Text;
+                dtvRegistro.Rows[i].Cells[2].Value = txtCantidad.Text;
+            }
+
         }
     }
 }

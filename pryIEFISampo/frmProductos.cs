@@ -27,6 +27,8 @@ namespace pryIEFISampo
         {
             if (dtpFecha.Value != DateTime.Today)
             {
+                MessageBox.Show("Se ha grabado correctamente");
+
                 int i = dtvRegistro.Rows.Add();
                 
                 dtvRegistro.Rows[i].Cells[0].Value = dtpFecha.Text;
@@ -34,10 +36,7 @@ namespace pryIEFISampo
                 dtvRegistro.Rows[i].Cells[2].Value = txtID.Text;
                 
             }
-            else
-            {
-                MessageBox.Show("Se ha grabado correctamente");
-            }
+           
         }   
     }
 }
