@@ -14,7 +14,7 @@ namespace pryIEFISampo
     {
         frmListado listado = new frmListado();
         
-        int i = 0;
+        int f = 0;
         public frmProductos()
         {
             InitializeComponent();
@@ -36,10 +36,13 @@ namespace pryIEFISampo
                 dtvRegistro.Rows[i].Cells[0].Value = dtpFecha.Text;
                 dtvRegistro.Rows[i].Cells[1].Value = txtProductos.Text;
                 dtvRegistro.Rows[i].Cells[2].Value = txtID.Text;
+                dtvRegistro.Rows[i].Cells[3].Value = txtCantidad.Text;
 
-                listado.matrizProducto[i,0] = dtpFecha.Text;
-                listado.matrizProducto[i,1] = txtProductos.Text;
-                listado.matrizProducto[i,2] = txtID.Text; 
+                listado.matrizProducto[f,0] = dtpFecha.Text;
+                listado.matrizProducto[f,1] = txtProductos.Text;
+                listado.matrizProducto[f,2] = txtID.Text;
+                listado.matrizProducto[f,3] = txtCantidad.Text;
+                f++;
             }
            
         }

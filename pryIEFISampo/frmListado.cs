@@ -12,7 +12,7 @@ namespace pryIEFISampo
 {
     public partial class frmListado : Form
     {
-        public string[,] matrizProducto = new string[10, 3];
+        public string[,] matrizProducto = new string[10, 4];
         public string[,] matrizVentas = new string[10, 4];
         public frmListado()
         {
@@ -39,22 +39,18 @@ namespace pryIEFISampo
                 {
                     if (matrizProducto[i, 0] != null)
                     {
-                        dtvListado.Rows.Add(matrizProducto[i, 0], matrizProducto[i, 1], matrizProducto[i, 2]);
+                        dtvListado.Rows.Add(matrizProducto[i, 1], matrizProducto[i, 0], matrizProducto[i,3], matrizProducto[i, 1]);
                     }
                 }
             }
-            else
+            else if(rbVenta.Checked)
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    if (matrizVentas[i, 0] != null)
+                    if (matrizVentas[i, 1] != null)
                     {
-                        dtvListado.Rows.Add(matrizVentas[i, 0], matrizVentas[i, 1], matrizVentas[i, 2]);
-
-
-
-
-
+                        dtvListado.Rows.Add(matrizVentas[i, 1], matrizVentas[i, 3], matrizVentas[i, 2], matrizVentas[i, 0]);
+                            
                     }
                 } 
             }

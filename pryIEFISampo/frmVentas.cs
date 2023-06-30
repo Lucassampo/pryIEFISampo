@@ -31,11 +31,13 @@ namespace pryIEFISampo
                 dtvRegistro.Rows[i].Cells[0].Value = dtpFecha.Text;
                 dtvRegistro.Rows[i].Cells[1].Value = txtProducto.Text;
                 dtvRegistro.Rows[i].Cells[2].Value = txtCantidad.Text;
+                dtvRegistro.Rows[i].Cells[3].Value = txtID.Text;
 
                 listado.matrizVentas[f, 0] = dtpFecha.Text;
                 listado.matrizVentas[f, 1] = txtProducto.Text;
-                listado.matrizVentas[f, 2] = txtCantidad.Text; 
-            
+                listado.matrizVentas[f, 2] = txtCantidad.Text;
+                listado.matrizVentas[f, 3] = txtID.Text;
+                f++;
             }
 
         }
