@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
             this.gbProductos = new System.Windows.Forms.GroupBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmdCargar = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtProductos = new System.Windows.Forms.TextBox();
             this.lblFechaDeCarga = new System.Windows.Forms.Label();
@@ -41,17 +41,19 @@
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pbLogoGrande = new System.Windows.Forms.PictureBox();
+            this.pbProducto = new System.Windows.Forms.PictureBox();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.btnListado = new System.Windows.Forms.Button();
             this.gbProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvRegistro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGrande)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // gbProductos
             // 
             this.gbProductos.Controls.Add(this.txtID);
-            this.gbProductos.Controls.Add(this.label1);
-            this.gbProductos.Controls.Add(this.cmdCargar);
+            this.gbProductos.Controls.Add(this.lblID);
+            this.gbProductos.Controls.Add(this.btnCargar);
             this.gbProductos.Controls.Add(this.dtpFecha);
             this.gbProductos.Controls.Add(this.txtProductos);
             this.gbProductos.Controls.Add(this.lblFechaDeCarga);
@@ -70,27 +72,27 @@
             this.txtID.Size = new System.Drawing.Size(162, 22);
             this.txtID.TabIndex = 6;
             // 
-            // label1
+            // lblID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 23);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "ID de producto";
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(6, 143);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(132, 23);
+            this.lblID.TabIndex = 5;
+            this.lblID.Text = "ID de producto";
             // 
-            // cmdCargar
+            // btnCargar
             // 
-            this.cmdCargar.BackColor = System.Drawing.SystemColors.Desktop;
-            this.cmdCargar.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.cmdCargar.Location = new System.Drawing.Point(55, 184);
-            this.cmdCargar.Name = "cmdCargar";
-            this.cmdCargar.Size = new System.Drawing.Size(203, 51);
-            this.cmdCargar.TabIndex = 4;
-            this.cmdCargar.Text = "Cargar";
-            this.cmdCargar.UseVisualStyleBackColor = false;
-            this.cmdCargar.Click += new System.EventHandler(this.cmdCargar_Click);
+            this.btnCargar.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnCargar.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnCargar.Location = new System.Drawing.Point(55, 184);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(203, 51);
+            this.btnCargar.TabIndex = 4;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.cmdCargar_Click);
             // 
             // dtpFecha
             // 
@@ -149,6 +151,7 @@
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.MinimumWidth = 6;
             this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
             this.Fecha.Width = 125;
             // 
             // Producto
@@ -156,6 +159,7 @@
             this.Producto.HeaderText = "Producto";
             this.Producto.MinimumWidth = 6;
             this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
             this.Producto.Width = 125;
             // 
             // ID
@@ -163,18 +167,43 @@
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Width = 125;
             // 
-            // pbLogoGrande
+            // pbProducto
             // 
-            this.pbLogoGrande.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoGrande.Image")));
-            this.pbLogoGrande.Location = new System.Drawing.Point(385, 48);
-            this.pbLogoGrande.Margin = new System.Windows.Forms.Padding(4);
-            this.pbLogoGrande.Name = "pbLogoGrande";
-            this.pbLogoGrande.Size = new System.Drawing.Size(196, 165);
-            this.pbLogoGrande.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogoGrande.TabIndex = 13;
-            this.pbLogoGrande.TabStop = false;
+            this.pbProducto.Image = ((System.Drawing.Image)(resources.GetObject("pbProducto.Image")));
+            this.pbProducto.Location = new System.Drawing.Point(385, 13);
+            this.pbProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.pbProducto.Name = "pbProducto";
+            this.pbProducto.Size = new System.Drawing.Size(196, 146);
+            this.pbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbProducto.TabIndex = 13;
+            this.pbProducto.TabStop = false;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolver.Location = new System.Drawing.Point(396, 240);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(163, 51);
+            this.btnVolver.TabIndex = 14;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // btnListado
+            // 
+            this.btnListado.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnListado.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnListado.Location = new System.Drawing.Point(396, 183);
+            this.btnListado.Name = "btnListado";
+            this.btnListado.Size = new System.Drawing.Size(163, 51);
+            this.btnListado.TabIndex = 15;
+            this.btnListado.Text = "Listado";
+            this.btnListado.UseVisualStyleBackColor = false;
+            this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
             // 
             // frmProductos
             // 
@@ -182,7 +211,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(594, 423);
-            this.Controls.Add(this.pbLogoGrande);
+            this.Controls.Add(this.btnListado);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.pbProducto);
             this.Controls.Add(this.dtvRegistro);
             this.Controls.Add(this.gbProductos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -191,7 +222,7 @@
             this.gbProductos.ResumeLayout(false);
             this.gbProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvRegistro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGrande)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProducto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,17 +230,19 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbProductos;
-        private System.Windows.Forms.Button cmdCargar;
+        private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.TextBox txtProductos;
         private System.Windows.Forms.Label lblFechaDeCarga;
         private System.Windows.Forms.Label lblProductos;
         private System.Windows.Forms.DataGridView dtvRegistro;
-        private System.Windows.Forms.PictureBox pbLogoGrande;
+        private System.Windows.Forms.PictureBox pbProducto;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnListado;
     }
 }

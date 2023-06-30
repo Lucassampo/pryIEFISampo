@@ -39,9 +39,9 @@
             // cmdProductos
             // 
             this.cmdProductos.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cmdProductos.Location = new System.Drawing.Point(12, 257);
+            this.cmdProductos.Location = new System.Drawing.Point(12, 254);
             this.cmdProductos.Name = "cmdProductos";
-            this.cmdProductos.Size = new System.Drawing.Size(155, 93);
+            this.cmdProductos.Size = new System.Drawing.Size(136, 93);
             this.cmdProductos.TabIndex = 0;
             this.cmdProductos.Text = "Productos";
             this.cmdProductos.UseVisualStyleBackColor = false;
@@ -51,9 +51,9 @@
             // 
             this.cmdVentas.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cmdVentas.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cmdVentas.Location = new System.Drawing.Point(222, 255);
+            this.cmdVentas.Location = new System.Drawing.Point(237, 254);
             this.cmdVentas.Name = "cmdVentas";
-            this.cmdVentas.Size = new System.Drawing.Size(162, 95);
+            this.cmdVentas.Size = new System.Drawing.Size(148, 95);
             this.cmdVentas.TabIndex = 1;
             this.cmdVentas.Text = "Ventas";
             this.cmdVentas.UseVisualStyleBackColor = false;
@@ -65,7 +65,7 @@
             this.lblRegistro.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblRegistro.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRegistro.Location = new System.Drawing.Point(165, 109);
+            this.lblRegistro.Location = new System.Drawing.Point(201, 114);
             this.lblRegistro.Name = "lblRegistro";
             this.lblRegistro.Size = new System.Drawing.Size(184, 38);
             this.lblRegistro.TabIndex = 2;
@@ -74,10 +74,10 @@
             // pbLogoGrande
             // 
             this.pbLogoGrande.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoGrande.Image")));
-            this.pbLogoGrande.Location = new System.Drawing.Point(23, 81);
+            this.pbLogoGrande.Location = new System.Drawing.Point(22, 65);
             this.pbLogoGrande.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogoGrande.Name = "pbLogoGrande";
-            this.pbLogoGrande.Size = new System.Drawing.Size(101, 97);
+            this.pbLogoGrande.Size = new System.Drawing.Size(126, 129);
             this.pbLogoGrande.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogoGrande.TabIndex = 3;
             this.pbLogoGrande.TabStop = false;

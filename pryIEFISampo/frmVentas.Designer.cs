@@ -34,17 +34,19 @@
             this.cmdCargar = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.gpVentas = new System.Windows.Forms.GroupBox();
-            this.dtvRegistro = new System.Windows.Forms.DataGridView();
-            this.lblProducto = new System.Windows.Forms.Label();
-            this.lblCantidad = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.lblProducto = new System.Windows.Forms.Label();
+            this.dtvRegistro = new System.Windows.Forms.DataGridView();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbVentas = new System.Windows.Forms.PictureBox();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.btnListado = new System.Windows.Forms.Button();
             this.gpVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvRegistro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // txtProducto
@@ -63,12 +65,14 @@
             // 
             // cmdCargar
             // 
+            this.cmdCargar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.cmdCargar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.cmdCargar.Location = new System.Drawing.Point(66, 182);
             this.cmdCargar.Name = "cmdCargar";
             this.cmdCargar.Size = new System.Drawing.Size(154, 55);
             this.cmdCargar.TabIndex = 2;
             this.cmdCargar.Text = "Cargar";
-            this.cmdCargar.UseVisualStyleBackColor = true;
+            this.cmdCargar.UseVisualStyleBackColor = false;
             this.cmdCargar.Click += new System.EventHandler(this.cmdCargar_Click);
             // 
             // dtpFecha
@@ -94,29 +98,15 @@
             this.gpVentas.TabStop = false;
             this.gpVentas.Text = "Ventas";
             // 
-            // dtvRegistro
+            // lblFecha
             // 
-            this.dtvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvRegistro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Producto,
-            this.Fecha,
-            this.Cantidad});
-            this.dtvRegistro.Location = new System.Drawing.Point(12, 291);
-            this.dtvRegistro.Name = "dtvRegistro";
-            this.dtvRegistro.RowHeadersWidth = 51;
-            this.dtvRegistro.RowTemplate.Height = 24;
-            this.dtvRegistro.Size = new System.Drawing.Size(467, 132);
-            this.dtvRegistro.TabIndex = 5;
-            // 
-            // lblProducto
-            // 
-            this.lblProducto.AutoSize = true;
-            this.lblProducto.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProducto.Location = new System.Drawing.Point(6, 28);
-            this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(93, 25);
-            this.lblProducto.TabIndex = 4;
-            this.lblProducto.Text = "Producto";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(8, 109);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(159, 26);
+            this.lblFecha.TabIndex = 6;
+            this.lblFecha.Text = "Fecha De Venta";
             // 
             // lblCantidad
             // 
@@ -128,15 +118,32 @@
             this.lblCantidad.TabIndex = 5;
             this.lblCantidad.Text = "Cantidad";
             // 
-            // lblFecha
+            // lblProducto
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(8, 109);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(159, 26);
-            this.lblFecha.TabIndex = 6;
-            this.lblFecha.Text = "Fecha De Venta";
+            this.lblProducto.AutoSize = true;
+            this.lblProducto.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.Location = new System.Drawing.Point(6, 28);
+            this.lblProducto.Name = "lblProducto";
+            this.lblProducto.Size = new System.Drawing.Size(93, 25);
+            this.lblProducto.TabIndex = 4;
+            this.lblProducto.Text = "Producto";
+            // 
+            // dtvRegistro
+            // 
+            this.dtvRegistro.AllowUserToAddRows = false;
+            this.dtvRegistro.AllowUserToDeleteRows = false;
+            this.dtvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvRegistro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Producto,
+            this.Fecha,
+            this.Cantidad});
+            this.dtvRegistro.Location = new System.Drawing.Point(12, 291);
+            this.dtvRegistro.Name = "dtvRegistro";
+            this.dtvRegistro.ReadOnly = true;
+            this.dtvRegistro.RowHeadersWidth = 51;
+            this.dtvRegistro.RowTemplate.Height = 24;
+            this.dtvRegistro.Size = new System.Drawing.Size(511, 132);
+            this.dtvRegistro.TabIndex = 5;
             // 
             // Producto
             // 
@@ -162,31 +169,58 @@
             this.Cantidad.ReadOnly = true;
             this.Cantidad.Width = 125;
             // 
-            // pictureBox1
+            // pbVentas
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(342, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 186);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pbVentas.Image = ((System.Drawing.Image)(resources.GetObject("pbVentas.Image")));
+            this.pbVentas.Location = new System.Drawing.Point(369, 5);
+            this.pbVentas.Name = "pbVentas";
+            this.pbVentas.Size = new System.Drawing.Size(189, 142);
+            this.pbVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbVentas.TabIndex = 6;
+            this.pbVentas.TabStop = false;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVolver.Location = new System.Drawing.Point(389, 230);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(154, 55);
+            this.btnVolver.TabIndex = 7;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // btnListado
+            // 
+            this.btnListado.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnListado.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnListado.Location = new System.Drawing.Point(389, 153);
+            this.btnListado.Name = "btnListado";
+            this.btnListado.Size = new System.Drawing.Size(154, 52);
+            this.btnListado.TabIndex = 16;
+            this.btnListado.Text = "Listado";
+            this.btnListado.UseVisualStyleBackColor = false;
+            this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
             // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(588, 450);
+            this.Controls.Add(this.btnListado);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.pbVentas);
             this.Controls.Add(this.dtvRegistro);
             this.Controls.Add(this.gpVentas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmVentas";
-            this.Text = "frmVentas";
+            this.Text = "Ventas";
             this.gpVentas.ResumeLayout(false);
             this.gpVentas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvRegistro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,6 +239,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbVentas;
+        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnListado;
     }
 }

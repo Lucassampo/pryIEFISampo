@@ -13,6 +13,8 @@ namespace pryIEFISampo
 
     public partial class frmVentas : Form
     {
+        frmListado listado = new frmListado();
+        int f = 0;
         public frmVentas()
         {
             InitializeComponent();
@@ -29,8 +31,23 @@ namespace pryIEFISampo
                 dtvRegistro.Rows[i].Cells[0].Value = dtpFecha.Text;
                 dtvRegistro.Rows[i].Cells[1].Value = txtProducto.Text;
                 dtvRegistro.Rows[i].Cells[2].Value = txtCantidad.Text;
+
+                listado.matrizVentas[f, 0] = dtpFecha.Text;
+                listado.matrizVentas[f, 1] = txtProducto.Text;
+                listado.matrizVentas[f, 2] = txtCantidad.Text; 
+            
             }
 
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnListado_Click(object sender, EventArgs e)
+        {
+            listado.ShowDialog();
+       }
     }
 }
