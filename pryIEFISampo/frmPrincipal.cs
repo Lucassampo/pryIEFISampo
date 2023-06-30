@@ -39,10 +39,6 @@ namespace pryIEFISampo
             ventas.ShowDialog();
         }
 
-        private void btnListado_Click(object sender, EventArgs e)
-        {
-            frmListado listado = new frmListado();
-            listado.ShowDialog();
-        }
+        
     }
 }
