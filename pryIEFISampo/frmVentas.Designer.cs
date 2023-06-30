@@ -34,6 +34,8 @@
             this.cmdCargar = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.gpVentas = new System.Windows.Forms.GroupBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblProducto = new System.Windows.Forms.Label();
@@ -41,11 +43,9 @@
             this.pbVentas = new System.Windows.Forms.PictureBox();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnListado = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvRegistro)).BeginInit();
@@ -55,7 +55,7 @@
             // txtProducto
             // 
             this.txtProducto.Location = new System.Drawing.Point(90, 23);
-            this.txtProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProducto.Margin = new System.Windows.Forms.Padding(2);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(130, 20);
             this.txtProducto.TabIndex = 0;
@@ -63,7 +63,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(90, 57);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(130, 20);
             this.txtCantidad.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.cmdCargar.BackColor = System.Drawing.SystemColors.ControlText;
             this.cmdCargar.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.cmdCargar.Location = new System.Drawing.Point(149, 157);
-            this.cmdCargar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmdCargar.Margin = new System.Windows.Forms.Padding(2);
             this.cmdCargar.Name = "cmdCargar";
             this.cmdCargar.Size = new System.Drawing.Size(116, 45);
             this.cmdCargar.TabIndex = 2;
@@ -84,7 +84,7 @@
             // dtpFecha
             // 
             this.dtpFecha.Location = new System.Drawing.Point(8, 133);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(219, 20);
             this.dtpFecha.TabIndex = 3;
@@ -101,13 +101,32 @@
             this.gpVentas.Controls.Add(this.cmdCargar);
             this.gpVentas.Controls.Add(this.dtpFecha);
             this.gpVentas.Location = new System.Drawing.Point(9, 10);
-            this.gpVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpVentas.Margin = new System.Windows.Forms.Padding(2);
             this.gpVentas.Name = "gpVentas";
-            this.gpVentas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpVentas.Padding = new System.Windows.Forms.Padding(2);
             this.gpVentas.Size = new System.Drawing.Size(415, 206);
             this.gpVentas.TabIndex = 4;
             this.gpVentas.TabStop = false;
             this.gpVentas.Text = "Ventas";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(90, 88);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(130, 20);
+            this.txtID.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(49, 87);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 21);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "ID";
             // 
             // lblFecha
             // 
@@ -149,11 +168,11 @@
             this.dtvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtvRegistro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
-            this.Cantidad,
             this.Producto,
+            this.Cantidad,
             this.ID});
             this.dtvRegistro.Location = new System.Drawing.Point(9, 239);
-            this.dtvRegistro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtvRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.dtvRegistro.Name = "dtvRegistro";
             this.dtvRegistro.ReadOnly = true;
             this.dtvRegistro.RowHeadersWidth = 51;
@@ -165,7 +184,7 @@
             // 
             this.pbVentas.Image = ((System.Drawing.Image)(resources.GetObject("pbVentas.Image")));
             this.pbVentas.Location = new System.Drawing.Point(428, 5);
-            this.pbVentas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbVentas.Margin = new System.Windows.Forms.Padding(2);
             this.pbVentas.Name = "pbVentas";
             this.pbVentas.Size = new System.Drawing.Size(142, 115);
             this.pbVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -177,7 +196,7 @@
             this.btnVolver.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnVolver.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVolver.Location = new System.Drawing.Point(445, 171);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(116, 45);
             this.btnVolver.TabIndex = 7;
@@ -190,32 +209,13 @@
             this.btnListado.BackColor = System.Drawing.SystemColors.ControlText;
             this.btnListado.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnListado.Location = new System.Drawing.Point(445, 124);
-            this.btnListado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListado.Margin = new System.Windows.Forms.Padding(2);
             this.btnListado.Name = "btnListado";
             this.btnListado.Size = new System.Drawing.Size(116, 42);
             this.btnListado.TabIndex = 16;
             this.btnListado.Text = "Listado";
             this.btnListado.UseVisualStyleBackColor = false;
             this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 87);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 21);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "ID";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(90, 88);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(130, 20);
-            this.txtID.TabIndex = 8;
             // 
             // Fecha
             // 
@@ -225,14 +225,6 @@
             this.Fecha.ReadOnly = true;
             this.Fecha.Width = 125;
             // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 125;
-            // 
             // Producto
             // 
             this.Producto.HeaderText = "Producto";
@@ -240,6 +232,14 @@
             this.Producto.Name = "Producto";
             this.Producto.ReadOnly = true;
             this.Producto.Width = 125;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 125;
             // 
             // ID
             // 
@@ -259,7 +259,7 @@
             this.Controls.Add(this.dtvRegistro);
             this.Controls.Add(this.gpVentas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmVentas";
             this.Text = "Ventas";
             this.gpVentas.ResumeLayout(false);
@@ -287,8 +287,8 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
     }
 }

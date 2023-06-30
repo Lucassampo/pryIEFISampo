@@ -39,7 +39,7 @@ namespace pryIEFISampo
                 {
                     if (matrizProducto[i, 0] != null)
                     {
-                        dtvListado.Rows.Add(matrizProducto[i, 1], matrizProducto[i, 0], matrizProducto[i,3], matrizProducto[i, 1]);
+                        dtvListado.Rows.Add(matrizProducto[i, 1], matrizProducto[i, 2], matrizProducto[i,3], matrizProducto[i, 0]);
                     }
                 }
             }
