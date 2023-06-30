@@ -31,12 +31,12 @@ namespace pryIEFISampo
             {
                 MessageBox.Show("Se ha grabado correctamente");
 
-                int i = dtvRegistro.Rows.Add();
+                int f = dtvRegistro.Rows.Add();
                 
-                dtvRegistro.Rows[i].Cells[0].Value = dtpFecha.Text;
-                dtvRegistro.Rows[i].Cells[1].Value = txtProductos.Text;
-                dtvRegistro.Rows[i].Cells[2].Value = txtID.Text;
-                dtvRegistro.Rows[i].Cells[3].Value = txtCantidad.Text;
+                dtvRegistro.Rows[f].Cells[0].Value = dtpFecha.Text;
+                dtvRegistro.Rows[f].Cells[1].Value = txtProductos.Text;
+                dtvRegistro.Rows[f].Cells[2].Value = txtID.Text;
+                dtvRegistro.Rows[f].Cells[3].Value = txtCantidad.Text;
 
                 listado.matrizProducto[f,0] = dtpFecha.Text;
                 listado.matrizProducto[f,1] = txtProductos.Text;
